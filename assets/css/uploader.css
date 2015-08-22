@@ -1,0 +1,46 @@
+#filedrag
+{
+
+    font-weight: bold;
+    text-align: center;
+    padding: 1em 0;
+    margin: 1em 0;
+    width:100%;
+    border: 2px dashed #555;
+    border-radius: 7px;
+    cursor: default;
+}
+
+#filedrag.hover
+{
+
+    border-color: #f00;
+    border-style: solid;
+    box-shadow: inset 0 3px 4px #888;
+}
+
+#box {
+    width:100%;
+    padding-bottom: 10px;
+    float: left;
+}
+#box p {
+    padding: 5px;
+    margin: 0px;
+}
+#drop {
+    width: 100%;
+
+}
+#status {
+
+    height: 25px;
+    font-size: 3em;
+    color: #000;
+    padding: 5px;
+}
+
+.addedIMG {
+    width: 50px;
+    height: 50px;
+}

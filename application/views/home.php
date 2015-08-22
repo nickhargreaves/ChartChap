@@ -16,7 +16,8 @@
 
     <!-- Custom CSS -->
     <link href="assets/freelancer_theme/css/freelancer.css" rel="stylesheet">
-    <link href="assets/custom.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/uploader.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="assets/freelancer_theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +33,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" onload="new uploader('drop', 'status', '<?php echo base_url();?>Uploader/upload', 'list');">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -45,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top"><img src="assets/logo.png" class="logo">ChartChap!</a>
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/logo.png" class="logo">ChartChap!</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,12 +79,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="assets/freelancer_theme/img/profile.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Start Bootstrap</span>
-                        <hr class="star-light">
-                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
-                    </div>
+                    <?php
+                    //upload box
+                        $this->load->view('upload_box');
+                    ?>
                 </div>
             </div>
         </div>
@@ -94,7 +93,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
+                    <h2>Recent Visualizations</h2>
                     <hr class="star-primary">
                 </div>
             </div>
