@@ -20,12 +20,12 @@ class Visualize extends CI_Controller
         <section>
 
             <form action='<?php echo base_url(); ?>visualize/finish' method='POST'>
-                <input type='hidden' value='<?php echo $type ?>' name='type'>
-                <input type='hidden' value='<?php echo $id ?>' name='dataset'>
+                <input type='hidden' value='<?php echo $type ?>' name='type' class="form-control">
+                <input type='hidden' value='<?php echo $id ?>' name='dataset' class="form-control">
                 <table width='100%'>
                     <tr>
                         <td>Title</td>
-                        <td><input type='text' name='title'></td>
+                        <td><input type='text' name='title' class='form-control'></td>
                     </tr>
                     <?php
                     if ($type == 'PieChart') {
@@ -61,7 +61,7 @@ class Visualize extends CI_Controller
         }
         if (count($result) > 0) {
 
-            echo "<td><select name='label1'>";
+            echo "<td><select name='label1' class='form-control'>";
 
             foreach ($result as $field) {
                 echo "<option value='$field'>$field</option>";
@@ -75,7 +75,7 @@ class Visualize extends CI_Controller
         echo "<tr><td>Values</td>";
         if (count($result2) > 0) {
 
-            echo "<td><select name='label2'>";
+            echo "<td><select name='label2' class='form-control'>";
             foreach ($result2 as $field) {
                 echo "<option value='$field'>$field</option>";
             }
@@ -88,28 +88,27 @@ class Visualize extends CI_Controller
     public function LineChart($id)
     {
         echo "<tr><td>x-axis</td>";
-        $sql = mysql_query("SELECT * FROM datasets WHERE id='" . $id . "'");
-        $row = mysql_fetch_array($sql);
+        $sql = $this->db->query("SELECT * FROM datasets WHERE id='" . $id . "'");
+        $row = $sql->result_array();
+        $row = $row[0];
         $table = $row['table'];
 
-        $result = mysql_query("SHOW COLUMNS FROM $table");
-        $result2 = mysql_query("SHOW COLUMNS FROM $table");
+        $result = $this->db->list_fields($table);
+        $result2 =$this->db->list_fields($table);
 
         //show x-axis
         if (!$result) {
             echo 'Could not run query: ' . mysql_error();
             exit;
         }
-        if (mysql_num_rows($result) > 0) {
+        if (count($result) > 0) {
 
             $fields = array();
-            echo "<td><select name='label1'>";
-            while ($rowa = mysql_fetch_assoc($result)) {
-                foreach ($rowa as $key => $value) {
-                    if ($key == 'Field')
-                        echo "<option value='$value'>$value</option>";
-                }
+            echo "<td><select name='label1' class='form-control'>";
+            foreach ($result2 as $field) {
+                echo "<option value='$field'>$field</option>";
             }
+
             echo "</select></td></tr>";
 
         }
@@ -119,21 +118,15 @@ class Visualize extends CI_Controller
             echo 'Could not run query: ' . mysql_error();
             exit;
         }
-        if (mysql_num_rows($result2) > 0) {
+        if (count($result2) > 0) {
 
-            $fields = array();
-
-            while ($rowa = mysql_fetch_assoc($result2)) {
-                foreach ($rowa as $key => $value) {
-                    if ($key == 'Field' && $value != 'id') {
-                        echo "<tr><td><input type='checkbox' name='label[]' value='" . $value . "'></td><td>";
-                        echo "$value";
-                        echo "</td></tr>";
-                    }
+            foreach ($result2 as $value) {
+                if ($value != 'id') {
+                    echo "<tr><td><input type='checkbox' name='label[]' value='" . $value . "' class='form-control'></td><td>";
+                    echo "$value";
+                    echo "</td></tr>";
                 }
             }
-
-
         }
     }
 
