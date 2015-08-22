@@ -98,7 +98,7 @@ class Visualize extends CI_Controller
 
         //show x-axis
         if (!$result) {
-            echo 'Could not run query: ' . mysql_error();
+            echo 'Could not run query';
             exit;
         }
         if (count($result) > 0) {
@@ -115,7 +115,7 @@ class Visualize extends CI_Controller
         //show other things to plot
         echo "<tr><td></td><td><b>Chart Parameters</b></td></tr>";
         if (!$result2) {
-            echo 'Could not run query: ' . mysql_error();
+            echo 'Could not run query';
             exit;
         }
         if (count($result2) > 0) {
@@ -214,7 +214,7 @@ class Visualize extends CI_Controller
             $labels=implode(', ', $labels);
 
 
-            $data[]= "['$label1', $labels]";
+            $data_raw[]= "['$label1', $labels]";
 
             $sql2 = $this->db->query("SELECT * FROM $table");
             $total = substr_count($label3, ',');
@@ -232,7 +232,7 @@ class Visualize extends CI_Controller
                 }
                 $rowf=implode(', ', $rowf);
 
-                $data[]="['".$row2[$label1]."', $rowf]";
+                $data_raw[]="['".$row2[$label1]."', $rowf]";
             }
         }
 

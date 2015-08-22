@@ -58,6 +58,7 @@
 
             <div id='formstuff' style="margin:auto;height:577px;width:517px;background:url('<?php echo base_url();?>assets/img/types.png')">
                 <div id='piechart' style='width:168px;height:139px;left:0px;' onclick="ajaxrequest('<?php echo base_url();?>/visualize/step2', 'context', 'formstuff', 'loading', 'PieChart')"></div>
+                <div id='linechart' style='width:168px;height:139px;right:0px;' onclick="ajaxrequest('<?php echo base_url();?>/visualize/step2', 'context', 'formstuff', 'loading', 'LineChart')"></div>
             </div>
         </div>
         <div class="line-divider"></div>
