@@ -55,13 +55,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#portfolio">Recent Visualizations</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">Feedback</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="http://github.com/nickhargreaves/chartchap" target="_blank"> <img src="assets/github.png"></a>
                     </li>
                 </ul>
             </div>
