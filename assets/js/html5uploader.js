@@ -94,7 +94,7 @@ function uploader(place, status, targetPHP, show) {
 				var img = document.createElement("img"); 
 				img.className = 'addedIMG';
 			    img.file = file;   
-			    img.src = 'icons/csv.png';
+			    img.src = 'assets/img/csv.png';
 				document.getElementById(show).appendChild(img);
 			}
 
