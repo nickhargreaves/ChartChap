@@ -106,7 +106,7 @@
                     $fontName = $_POST['fontName'];
                     $is3D = $_POST['is3D'];
                     ?>
-                    <textarea rows='4' style='width:100%'>
+                    <textarea rows='4' style='width:100%' class="form-control">
 	<iframe
         src='<?php echo base_url() ?>embedd?id=<?php echo $id . "&backgroundColor=" . $backgroundColor . "&title=" . $title . "&width=" . $width . "&height=" . $height . "&fill=" . $fill . "&backgroundColorstroke=" . $backgroundColorstroke . "&backgroundColorstrokeWidth=" . $backgroundColorstrokeWidth . "&fontSize=" . $fontSize . "&fontName=" . $fontName . "&is3D=" . $is3D ?>'
         width='<?php echo $width; ?>' scrolling='no' border='0' height='<?php echo $height; ?>'></iframe>
@@ -165,43 +165,43 @@
                     <table width='100%'>
                         <tr>
                             <td>Title</td>
-                            <td><input type="text" name='title' value='<?php echo $title; ?>'></td>
+                            <td><input  class="form-control" type="text" name='title' value='<?php echo $title; ?>'></td>
                         </tr>
                         <tr>
                             <td>Height</td>
-                            <td><input type="text" name='height' value='300'></td>
+                            <td><input  class="form-control" type="text" name='height' value='300'></td>
                         </tr>
                         <tr>
                             <td>Width</td>
-                            <td><input type="text" name='width' value='600'></td>
+                            <td><input  class="form-control" type="text" name='width' value='600'></td>
                         </tr>
                         <tr>
                             <td>Background color</td>
-                            <td><input type="text" name='backgroundColor' value='white'></td>
+                            <td><input  class="form-control" type="text" name='backgroundColor' value='white'></td>
                         </tr>
                         <tr>
                             <td>Chart border color</td>
-                            <td><input type="text" name='backgroundColorstroke' value='#666'></td>
+                            <td><input class="form-control" type="text" name='backgroundColorstroke' value='#666'></td>
                         </tr>
                         <tr>
                             <td>Border width</td>
-                            <td><input type="text" name='backgroundColorstrokeWidth' value='5'></td>
+                            <td><input class="form-control" type="text" name='backgroundColorstrokeWidth' value='5'></td>
                         </tr>
                         <tr>
                             <td>Fill color</td>
-                            <td><input type="text" name='fill' value='#5A5A5A'></td>
+                            <td><input class="form-control" type="text" name='fill' value='#5A5A5A'></td>
                         </tr>
                         <tr>
                             <td>Font size</td>
-                            <td><input type="text" name='fontSize' value='12'></td>
+                            <td><input class="form-control" type="text" name='fontSize' value='12'></td>
                         </tr>
                         <tr>
                             <td>Font name</td>
-                            <td><input type="text" name='fontName' value='Arial'></td>
+                            <td><input class="form-control" type="text" name='fontName' value='Arial'></td>
                         </tr>
                         <tr>
                             <td>3D chart</td>
-                            <td><select name='is3D'>
+                            <td><select name='is3D' class="form-control">
                                     <option value='false'>False</option>
                                     <option value='true'>True</option>
                                 </select>
