@@ -2,8 +2,9 @@
 
 
 ?>
+<>
 <script type="text/javascript">
-<!--
+
 // create the XMLHttpRequest object, according browser
 function get_XmlHttp() {
   // create the variable that will contain the instance of the XMLHttpRequest object (initially with null value)
@@ -43,31 +44,29 @@ function ajaxrequest(php_file, tagID, formstuff, loading, type) {
     }
   }
 }
---></script>
-  <div class="well">
-		<div class="navbar">
-			<div class="navbar-inner">
-				<a class="brand" href="#">Choose visualization type</a>
-			</div>
-		</div>
-		
-		<div class="info-widget">
-			<div class="row-fluid">
-			<div id="loading" align='center'>
-<img src='<?php echo $home?>images/loader.gif'>
+</script>
+<div class="well">
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="#">Choose visualization type</a>
+    </div>
 </div>
-<script type="text/javascript">document.getElementById("loading").style.display = 'none';</script>
-<div id="context"></div>
 
-<div id='formstuff' style="margin:auto;height:577px;width:517px;background:url('<?php echo $home?>images/types.png')">
-<div id='piechart' style='width:168px;height:139px;left:0px;' onclick="ajaxrequest('<?php echo $home?>/visualize/step2.php', 'context', 'formstuff', 'loading', 'PieChart')"></div>
+<div class="info-widget">
+    <div class="row-fluid">
+      <div id="loading" align='center'>
+        <img src='<?php echo base_url();?>images/loader.gif'>
+      </div>
+      <script type="text/javascript">document.getElementById("loading").style.display = 'none';</script>
+      <div id="context"></div>
+      
+      <div id='formstuff' style="margin:auto;height:577px;width:517px;background:url('<?php echo base_url();?>images/types.png')">
+      <div id='piechart' style='width:168px;height:139px;left:0px;' onclick="ajaxrequest('<?php echo base_url();?>/visualize/step2.php', 'context', 'formstuff', 'loading', 'PieChart')"></div>
+      </div>				
+    </div>
+    <div class="line-divider"></div>
+    
 </div>
- </section>
-				
-			</div>
-			<div class="line-divider"></div>
-			
-		</div>
  </div>                     
                     
 

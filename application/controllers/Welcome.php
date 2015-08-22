@@ -22,7 +22,9 @@ class Welcome extends CI_Controller {
 	{
 		$data['cats'] = $this->getCategories();
 		$data['countries'] = $this->getCountries();
+		$this->load->view('header', $data);
 		$this->load->view('home', $data);
+		$this->load->view('footer', $data);
 	}
 
 	public function getCategories(){
