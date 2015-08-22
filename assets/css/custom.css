@@ -23,6 +23,9 @@ textarea.form-control {
 .white_link{
     color: #000;
 }
+.white_link a, a:hover, a:focus, a:active, a.active{
+    color: #fff!important;
+}
 .well{
     min-height: 500px;
     padding: 50px !important;

@@ -108,10 +108,10 @@
                     ?>
                     <textarea rows='4' style='width:100%' class="form-control">
 	<iframe
-        src='<?php echo base_url() ?>embedd?id=<?php echo $id . "&backgroundColor=" . $backgroundColor . "&title=" . $title . "&width=" . $width . "&height=" . $height . "&fill=" . $fill . "&backgroundColorstroke=" . $backgroundColorstroke . "&backgroundColorstrokeWidth=" . $backgroundColorstrokeWidth . "&fontSize=" . $fontSize . "&fontName=" . $fontName . "&is3D=" . $is3D ?>'
+        src='<?php echo base_url() ?>visualize/embedd?id=<?php echo $id . "&backgroundColor=" . $backgroundColor . "&title=" . $title . "&width=" . $width . "&height=" . $height . "&fill=" . $fill . "&backgroundColorstroke=" . $backgroundColorstroke . "&backgroundColorstrokeWidth=" . $backgroundColorstrokeWidth . "&fontSize=" . $fontSize . "&fontName=" . $fontName . "&is3D=" . $is3D ?>'
         width='<?php echo $width; ?>' scrolling='no' border='0' height='<?php echo $height; ?>'></iframe>
 	</textarea>
-                    <h3>Preview</h3>
+                    <h3 style="text-align:center">Preview</h3>
                     <?php
                 }
                 ?>
