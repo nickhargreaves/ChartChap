@@ -25,28 +25,21 @@
             <div class="col-sm-4">
                 <input id='name' type='text' name='name' placeholder='Dataset name' class="form-control">
                 <select id='category' name='category'   class="form-control">
+                    <option value="0">Select category</option>
                 <?php
-                $cats = mysql_query("SELECT * FROM categories");
-                while($cat = mysql_fetch_array($cats))
+
+                foreach($cats as $cat)
                 {
                     echo '<option value="'.$cat['name'].'">'.$cat['name'].'</option>';
                 }
                 ?>
                 </select>
                 <select id='country' name='country'   class="form-control">
+                    <option value="0">Select country</option>
                     <?php
-                    $countries = mysql_query("SELECT * FROM country");
-                    while($country = mysql_fetch_array($countries))
+                    foreach($countries as $country)
                     {
-                        if($country['printable_name']=='Kenya')
-                        {
-                            echo '<option value="'.$country['printable_name'].'" selected="selected">'.$country['printable_name'].'</option>';
-
-                        }
-                        else
-                        {
-                            echo '<option value="'.$country['printable_name'].'">'.$country['printable_name'].'</option>';
-                        }
+                        echo '<option value="'.$country['country_code'].'">'.$country['printable_name'].'</option>';
                     }
                     ?>
                 </select>

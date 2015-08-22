@@ -20,6 +20,18 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+		$data['cats'] = $this->getCategories();
+		$data['countries'] = $this->getCountries();
+		$this->load->view('home', $data);
+	}
+
+	public function getCategories(){
+		$cats = $this->db->get("categories");
+		return $cats->result_array();
+	}
+
+	public function getCountries(){
+		$cats = $this->db->get("countries");
+		return $cats->result_array();
 	}
 }
