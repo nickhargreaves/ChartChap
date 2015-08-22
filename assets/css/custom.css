@@ -24,5 +24,8 @@ textarea.form-control {
     color: #000;
 }
 .well{
-    
+    min-height: 500px;
+    padding: 50px !important;
+    margin-bottom: 0px !important;
+    background-color: #fff;
 }
