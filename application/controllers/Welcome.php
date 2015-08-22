@@ -22,6 +22,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['cats'] = $this->getCategories();
 		$data['countries'] = $this->getCountries();
+		$data['datasets'] = $this->getDatasets();
 		$this->load->view('header', $data);
 		$this->load->view('home', $data);
 		$this->load->view('footer', $data);
@@ -34,6 +35,11 @@ class Welcome extends CI_Controller {
 
 	public function getCountries(){
 		$cats = $this->db->get("countries");
+		return $cats->result_array();
+	}
+
+	public function getDatasets(){
+		$cats = $this->db->get("datasets");
 		return $cats->result_array();
 	}
 }
