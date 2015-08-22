@@ -138,7 +138,7 @@ class Uploader extends CI_Controller {
 		}
 
 		$query = "CREATE TABLE `".$tbname."`($columnames);";
-		$create_tables= mysql_query($query) or die(mysql_error());
+		$create_tables= $this->db->query($query);
 
 		if(!$create_tables){
 			echo "error creating table";
@@ -177,9 +177,10 @@ class Uploader extends CI_Controller {
 
 					$queries .= $query . "\n";
 
-					$insert = mysql_query($query);
+					if(($query)!="insert into ".$tbname." values('','');")
+						$insert = $this->db->query($query);
 
-					if(!$insert){ $skipped++;}
+					//if(!$insert){ $skipped++;}
 
 				}
 			}
@@ -191,30 +192,29 @@ class Uploader extends CI_Controller {
 			$description=$_POST['description'];
 			$category=$_POST['category'];
 
-			mysqli_query("INSERT INTO datasets(`name`, `table`, `description`, `category`, `country`)VALUES('$name', '$table', '$description', '$category', '$country')");
+			$this->db->query("INSERT INTO datasets(`name`, `table`, `description`, `category`, `country`)VALUES('$name', '$table', '$description', '$category', '$country')");
 
 			echo "Found a total of $lines records in this csv file.\n";
 
 
-			$sql=mysqli_query("SELECT * FROM datasets ORDER BY id Desc");
-			$row=mysqli_fetch_array($sql);
+			$sql=$this->db->query("SELECT * FROM datasets ORDER BY id Desc");
+			$row = $sql->result_array();
+			$row = $row[0];
 
 			echo "<br><b>".$row['name']."</b><br>";
 			$table = $row['table'];
 
-			$result = mysqli_query("SHOW COLUMNS FROM $table");
+			$result = $this->db->list_fields($table);
+
 			if (!$result) {
-				echo 'Could not run query: ' . mysql_error();
+				echo 'Could not run query';
 				exit;
 			}
-			if (mysqli_num_rows($result) > 0) {
+			if (count($result) > 0) {
 				echo"<div style='font-size:x-small'>Columns: ";
 				$fields=array();
-				while ($rowa = mysqli_fetch_assoc($result)) {
-					foreach($rowa as $key=>$value){
-						if($key=='Field')
-							$fields[]=$value;
-					}
+				foreach ($result as $field) {
+					$fields[] = $field;
 				}
 				echo implode(', ', $fields);
 				//description
@@ -222,7 +222,8 @@ class Uploader extends CI_Controller {
 				echo"</div>";
 			}
 			echo $row['description'];
-			echo "<br><a href='visualize?dataset=".$row['id']."'>Create visual</a>";
+
+			echo "<br><a href='visualize?dataset=".$row['id']."' class='white_link'>Create visualization</a>";
 
 		}
 		}

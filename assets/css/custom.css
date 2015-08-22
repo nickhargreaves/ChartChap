@@ -20,3 +20,6 @@
 textarea.form-control {
     min-height: 140px !important;
 }
+.white_link{
+    color: #000;
+}
