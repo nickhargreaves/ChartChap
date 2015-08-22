@@ -63,7 +63,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Feedback</a>
+                        <a href="#merge">Merge Datasets</a>
                     </li>
                     <li class="page-scroll">
                         <a href="http://github.com/nickhargreaves/chartchap" target="_blank">Github Code</a>
