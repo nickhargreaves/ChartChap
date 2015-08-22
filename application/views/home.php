@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>ChartChap - Quick, Easy, Embeddable Charts</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="assets/freelancer_theme/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="assets/freelancer_theme/css/freelancer.css" rel="stylesheet">
+    <link href="assets/custom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="assets/freelancer_theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -44,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top"><img src="assets/logo.png" class="logo">ChartChap!</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

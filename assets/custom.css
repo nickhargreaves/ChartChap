@@ -1,0 +1,10 @@
+.logo{
+    height: 70px;
+}
+.navbar-brand>img
+{
+    display:inline !important;
+}
+.navbar-brand{
+    padding: 0px !important;
+}
