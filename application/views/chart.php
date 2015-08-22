@@ -8,7 +8,7 @@
     <div class="info-widget">
         <div class="row-fluid">
 
-            <section>
+
                 <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script>
                 <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
                 <script>
@@ -215,8 +215,6 @@
                     </table>
                 </form>
 
-
-            </section>
         </div>
         <div class="line-divider"></div>
 
