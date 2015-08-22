@@ -1,5 +1,3 @@
-<script src="assets/js/html5uploader.js"></script>
-
 <div id="box">
 
 		<div id ='filedrag'>
@@ -46,7 +44,7 @@
             </div>
             <div  class="col-sm-8">
                 <textarea id='description'  name='description' placeholder='Description' class="form-control" rows='5'></textarea>
-                <input type='submit' name='submit' value='add dataset' class='btn btn-primary' onclick="ajaxrequest('uploader/addcsv', 'context', 'stuff', 'loading')">
+                <input type='submit' name='submit' value='add dataset' class='btn btn-primary' onclick="ajaxrequest('Uploader/addcsv', 'context', 'stuff', 'loading')">
 
             </div>
 

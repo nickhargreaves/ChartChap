@@ -15,7 +15,6 @@
 */
 
 function uploader(place, status, targetPHP, show) {
-	
 	// Upload image files
 	upload = function(file) {
 	

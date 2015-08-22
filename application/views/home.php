@@ -30,11 +30,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="<?php echo base_url();?>assets/js/ajax_request.js"></script>
+    <script src="<?php echo base_url();?>assets/js/html5uploader.js"></script>
 
 </head>
 
 <body id="page-top" class="index" onload="new uploader('drop', 'status', '<?php echo base_url();?>Uploader/upload', 'list');">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
