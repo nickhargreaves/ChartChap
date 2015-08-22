@@ -64,7 +64,7 @@
                         <a href="#contact">Feedback</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="http://github.com/nickhargreaves/chartchap" target="_blank"> <img src="assets/github.png"></a>
+                        <a href="http://github.com/nickhargreaves/chartchap" target="_blank">Github Code</a>
                     </li>
                 </ul>
             </div>
