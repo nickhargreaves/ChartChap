@@ -20,7 +20,7 @@
     <link href="<?php echo base_url();?>assets/css/uploader.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="assets/freelancer_theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url();?>assets/freelancer_theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 

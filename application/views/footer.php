@@ -288,10 +288,6 @@
 <script src="<?php echo base_url();?>assets/freelancer_theme/js/classie.js"></script>
 <script src="<?php echo base_url();?>assets/freelancer_theme/js/cbpAnimatedHeader.js"></script>
 
-<!-- Contact Form JavaScript -->
-<script src="<?php echo base_url();?>assets/freelancer_theme/js/jqBootstrapValidation.js"></script>
-<script src="<?php echo base_url();?>assets/freelancer_theme/js/contact_me.js"></script>
-
 <!-- Custom Theme JavaScript -->
 <script src="<?php echo base_url();?>assets/freelancer_theme/js/freelancer.js"></script>
 

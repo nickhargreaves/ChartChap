@@ -160,16 +160,34 @@ class Visualize extends CI_Controller
     {
         $this->load->view('header');
 
+        $data = $this->getChart();
+
+        $this->load->view('chart.php', $data);
+
+        $this->load->view('footer');
+    }
+    public function embed()
+    {
+
+        $data = $this->getChart();
+
+        $this->load->view('embed_chart.php', $data);
+
+    }
+
+
+    public function getChart(){
         $id = $_GET['id'];
-        $data['id'] = $_GET['id'];
+
 
         $sql = $this->db->query("SELECT * FROM charts WHERE id='$id'");
         $row = $sql->result_array();
         $row = $row[0];
 
         $type = $row['type'];
-        $data['type'] = $row['type'];
-        $data['title'] = $row['title'];
+
+        $title = $row['title'];
+
         $label1 = $row['label1'];
         $label2 = $row['label2'];
 
@@ -236,11 +254,8 @@ class Visualize extends CI_Controller
             }
         }
 
-        $data['data'] =implode(', ', $data_raw);
-
-        $this->load->view('chart.php', $data);
-
-        $this->load->view('footer');
+        $data = implode(', ', $data_raw);
+        return array("title"=>$title, "data"=>$data, "id"=>$id, "type"=>$type);
     }
 }
 
