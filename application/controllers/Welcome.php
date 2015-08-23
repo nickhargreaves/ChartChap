@@ -51,7 +51,7 @@ class Welcome extends CI_Controller {
 
 		foreach($latestCharts as $row){
 
-
+			$id = $row['id'];
 			$type=$row['type'];
 			$title=$row['title'];
 			$label1=$row['label1'];
@@ -119,7 +119,7 @@ class Welcome extends CI_Controller {
 			}
 			$data = implode(', ', $data);
 
-			$latestCharts_final[] = array("data"=>$data, "title"=>$title, "type"=>$type);
+			$latestCharts_final[] = array("data"=>$data, "title"=>$title, "type"=>$type, "id"=>$id);
 		}
 
 		return $latestCharts_final;

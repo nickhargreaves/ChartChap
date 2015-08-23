@@ -7,7 +7,7 @@
 ?>
 
         <div class="col-sm-5 portfolio-item">
-            <a href="#portfolioModal<?php echo $i?>" class="portfolio-link" data-toggle="modal">
+            <a href="<?php echo base_url()."visualize/chart?id=".$chart['id']?>" class="portfolio-link" data-toggle="modal">
 
                     <script type="text/javascript">
                         google.load("visualization", "1", {packages:["corechart"]});
@@ -29,8 +29,8 @@
                     </script>
             
                     <div id="chart_div<?php echo $i?>" style="width: 500px; height: 300px;"></div>
-
             </a>
+
         </div>
 
 <?php
