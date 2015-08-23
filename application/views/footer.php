@@ -1,7 +1,7 @@
 </div>
 <!-- Footer -->
 <footer class="text-center">
-    <div class="footer-above">
+    <div class="footer-above" style="display: none">
         <div class="container">
             <div class="row">
                 <div class="footer-col col-md-4">
@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Your Website 2014
+                    Copyright &copy; ChartChap 2015
                 </div>
             </div>
         </div>
