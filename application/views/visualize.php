@@ -56,9 +56,9 @@
             <script type="text/javascript">document.getElementById("loading").style.display = 'none';</script>
             <div id="context"></div>
 
-            <div id='formstuff' style="margin:auto;height:577px;width:517px;background:url('<?php echo base_url();?>assets/img/types.png')">
-                <div id='piechart' style='width:168px;height:139px;left:0px;' onclick="ajaxrequest('<?php echo base_url();?>/visualize/step2', 'context', 'formstuff', 'loading', 'PieChart')"></div>
-                <div id='linechart' style='width:168px;height:139px;right:0px;' onclick="ajaxrequest('<?php echo base_url();?>/visualize/step2', 'context', 'formstuff', 'loading', 'LineChart')"></div>
+            <div id='formstuff' style="position:relative; margin:auto;height:577px;width:517px;background:url('<?php echo base_url();?>assets/img/types.png')">
+                <div id='piechart' style='background:rgba(255,0,0,0.4);cursor: pointer; cursor: hand;width:168px;position:absolute;height:139px;left:0px;' onclick="ajaxrequest('<?php echo base_url();?>/visualize/step2', 'context', 'formstuff', 'loading', 'PieChart')"></div>
+                <div id='linechart' style='background:rgba(255,0,0,0.4);cursor: pointer; cursor: hand;width:163px;position:absolute;height:139px;top:292px;left:178px;' onclick="ajaxrequest('<?php echo base_url();?>/visualize/step2', 'context', 'formstuff', 'loading', 'LineChart')"></div>
             </div>
         </div>
         <div class="line-divider"></div>
