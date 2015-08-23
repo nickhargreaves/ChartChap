@@ -54,16 +54,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="<?php echo base_url();?>#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Recent Visualizations</a>
+                        <a href="<?php echo base_url();?>#portfolio">Recent Visualizations</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="<?php echo base_url();?>#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#merge">Merge Datasets</a>
+                        <a href="<?php echo base_url();?>#merge">Merge Datasets</a>
                     </li>
                     <li class="page-scroll">
                         <a href="http://github.com/nickhargreaves/chartchap" target="_blank">Github Code</a>
