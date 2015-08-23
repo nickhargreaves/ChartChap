@@ -6,6 +6,7 @@ ChartChap is a free data visualization tool that enables non programmers to be a
 
 It also allows you to merge different datasets and create visualizations.
 
+`Check out the demo <http://chartchap.nickhargreaves.com>`_
 
 *******************
 Server Requirements
