@@ -88,4 +88,3 @@ function ajaxrequest_hybrid(php_file) {
         }
     }
 }
-document.getElementById("loading_merge").style.display = 'none';
