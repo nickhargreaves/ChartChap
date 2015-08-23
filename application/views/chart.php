@@ -13,8 +13,8 @@
                 <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
                 <script>
                     function getImgData(chartContainer) {
-                        var chartArea = chartContainer.getElementsByTagName('iframe')[0].
-                            contentDocument.getElementById('chartArea');
+                        var chartArea = chartContainer.getElementsByTagName('svg');//[0].
+                           // contentDocument.getElementById('chartArea');
                         var svg = chartArea.innerHTML;
                         var doc = chartContainer.ownerDocument;
                         var canvas = doc.createElement('canvas');

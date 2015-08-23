@@ -7,6 +7,7 @@
                     //upload box
                         $this->load->view('upload_box');
                     ?>
+
                 </div>
             </div>
         </div>

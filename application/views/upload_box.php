@@ -6,6 +6,7 @@
 
                 <div class="intro-text">
                     <span class="name">Drag and Drop File To Start</span>
+                    <a href="assets/data/demo.csv" class="white_link">Download demo dataset</a>
                 </div>
                 <div id="status">
 
