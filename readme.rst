@@ -4,9 +4,7 @@ What is ChartChap
 
 ChartChap is a free data visualization tool that enables non programmers to be able to use Google Charts in the projects and stories.
 
-It also allows you to merge different datasets and create visualizations.
-
-`Check out the demo <http://chartchap.nickhargreaves.com>`_
+It also allows you to merge different datasets and create visualizations. Check out `the demo <http://chartchap.nickhargreaves.com>`_ here.
 
 *******************
 Server Requirements
